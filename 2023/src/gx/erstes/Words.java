@@ -1,19 +1,19 @@
 package gx.erstes;
 
 public enum Words {
-    ONE("ONE", 1),
-    TWO("TWO", 2),
-    THREE("THREE", 3),
-    FOUR("FOUR", 4),
-    FIVE("FIVE", 5),
-    SIX("SIX", 6),
-    SEVEN("SEVEN", 7),
-    EIGHT("EIGHT", 8),
-    NINE("NINE", 9),
-    ZERO("ZERO", 0);
+    ONE("one", 1),
+    TWO("two", 2),
+    THREE("three", 3),
+    FOUR("four", 4),
+    FIVE("five", 5),
+    SIX("six", 6),
+    SEVEN("seven", 7),
+    EIGHT("eight", 8),
+    NINE("nine", 9),
+    ZERO("zero", 0);
 
-    String name;
-    int value;
+    final String name;
+    final int value;
 
     Words(String name, int value) {
         this.name = name;
