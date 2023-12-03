@@ -2,26 +2,21 @@ package gx.erstes;
 
 import gx.util.FileReader;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 class Erstes {
     public static void main(String[] args) {
 
-//        String[] data = FileReader.readFile("01_input.txt").split("\n");
-        String[] data = FileReader.readFile("01_input_meins.txt").split("\n");
-//        String[] data = FileReader.readFile("01_02_input.txt").split("\n");
+//        String[] data = FileReader.readFile("01/01_input.txt").split("\n");
+        String[] data = FileReader.readFile("01/01_input_meins.txt").split("\n");
+//        String[] data = FileReader.readFile("01/01_02_input.txt").split("\n");
 
         var result = Arrays.stream(data)
                 .map(Erstes::findFirstAndLast)
                 .map(Integer::valueOf)
                 .peek(x -> System.out.println("v: " + x))
                 .reduce(0, Integer::sum);
-//        .toList();
 
         System.out.println("result: " + result);
     }
