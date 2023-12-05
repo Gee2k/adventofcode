@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
 class Drittes {
     public static void main(String[] args) {
 
-        String[] arrayData = FileReader.readFile("03/03_example.txt").split("\n");
-//        String[] arrayData = FileReader.readFile("03/03_meins.txt").split("\n");
+//        String[] arrayData = FileReader.readFile("03/03_example.txt").split("\n");
+        String[] arrayData = FileReader.readFile("03/03_meins.txt").split("\n");
         Map<Integer, Map<Integer, List<String>>> indexMap = new HashMap<>();
 
         for (int i = 0; i < arrayData.length; i++) {
@@ -22,10 +22,10 @@ class Drittes {
         }
 
         var result = indexMap.entrySet().stream()
-                .peek(entry -> System.out.println("validating: " + entry))
+//                .peek(entry -> System.out.println("validating: " + entry))
                 .map(entry -> hasSymbol(entry, arrayData))
-                .flatMap(Collection::stream)
                 .peek(entry -> System.out.println("valid: " + entry))
+                .flatMap(Collection::stream)
                 .map(Integer::valueOf)
                 .reduce(0, Integer::sum);
 
@@ -67,7 +67,7 @@ class Drittes {
     }
 
     private static  Map<Integer, List<String>> findPartsWIthIndex(String data) {
-        System.out.println("input is: " + data);
+//        System.out.println("input is: " + data);
 
         Map<Integer, List<String>> indexMap = new HashMap<>();
         List<String> foundNumber = new ArrayList<>();
